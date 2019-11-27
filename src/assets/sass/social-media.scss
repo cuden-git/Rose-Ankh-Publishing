@@ -1,0 +1,33 @@
+.social-media {
+
+    @extend %no-margin;
+    width: 100%;
+
+    @include media-breakpoint-up(sm) {
+        text-align: right;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        text-align: center;
+    }
+
+    li{
+        @extend %no-bullet;
+        display: inline-block;
+        margin-left: rem(15px);
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+    }
+
+    img{
+        height: rem(25px);
+
+        // @include media-breakpoint-up(sm) {      
+        //     width: rem(25px);
+        // }
+    }
+}

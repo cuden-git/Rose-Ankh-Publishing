@@ -1,0 +1,50 @@
+body {
+    font-family: "LibreFranklin-Light";
+}
+
+h6,h5,h4,h3,h2,h1 {
+   // font-family: "Farro-Regular";
+    font-family: "TrajanPro-Regular";
+}
+
+h2,
+h1 {
+    margin-bottom: rem(30px);
+}
+
+h5,
+h4,
+h3 {
+    margin-bottom: rem(15px);
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+.page-title {
+    margin-bottom: rem(50px);
+    color: $link-colour;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: rem(15px);
+}
+
+p + h2 {
+    margin-top: rem(50px); 
+}
+
+a {
+    color: #d29e0e;
+    transition: color .3s;
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+strong, b {
+    font-family: "LibreFranklin-Regular";
+}

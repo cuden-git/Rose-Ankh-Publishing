@@ -1,0 +1,245 @@
+#main-menu {
+
+    //padding-bottom: rem(30px);
+    @media (max-width: 1199.98px) {
+        //@include media-breakpoint-down(xl) {
+        $heightVar: rem(90px);
+        position: fixed;
+        background-color: #000000;
+        height: calc(100vh - #{$heightVar});
+        width: 100vw;
+        top: $heightVar;
+        left: 100vw;
+        transition: left .5s;
+        z-index: 2;
+        overflow-y: auto;
+        padding-left: rem(30px);
+        padding-top: rem(30px);
+
+        &.open {
+            left: 0;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        display: flex;
+        align-items: center;
+    }
+
+    &.active {
+        left: 0;
+    }
+
+    .main-menu {
+
+        @extend %no-bullet;
+        @extend %no-margin;
+        font-family: "TrajanPro-Regular";
+
+        @media (min-width: 1200px) {
+            //@include media-breakpoint-up(xl) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            //display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 100%;
+            align-items: center;
+        }
+
+        >li {
+
+            position: relative;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            @media (max-width: 1199.98px) {
+                // @include media-breakpoint-down(xl) {
+                font-size: 2rem;
+            }
+
+            @media (min-width: 1200px) {
+                //@include media-breakpoint-up(xl) {
+
+                display: flex;
+                align-items: center;
+                height: 100%;
+                //margin-right: .5rem;
+                white-space: nowrap;
+                line-height: 1;
+            }
+
+            &.current_page_item,
+            &.current-menu-item {
+
+                a {
+                    color: #ffffff;
+                }
+
+            }
+
+            &:hover {
+
+                .home & {
+                    
+                    &::after {
+
+                        @media (min-width: 1200px) {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &::after {
+
+                .home & {
+
+                    @media (min-width: 1200px) {
+                        content: '';
+                        position: absolute;
+                        transition: opacity .5s;
+                        height: 100%;
+                        width: rem(40px);
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: url(../images/ra-icon.png) center center no-repeat;
+                        background-size: 100%;
+                        opacity: .4;
+                    }
+                }
+            }
+
+            >a {
+                color: $brand-colour2;
+                display: block;
+                padding: .5rem 1rem;
+                font-weight: bold;
+
+                @media (max-width: 1199.98px) {
+                    //color: #ffffff;
+                    padding-left: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    background: #000000;
+                    border: 2px solid $brand-colour1;
+                }
+            }
+
+            &:hover {
+                .sub-menu {
+                    left: 0;
+                }
+            }
+        }
+
+        .sub-menu {
+
+            @extend %no-bullet;
+            padding-top: rem(20px);
+            z-index: 2;
+
+            @media (max-width: 1199.98px) {
+                //@include media-breakpoint-down(xl) {
+                padding-left: rem(20px);
+            }
+
+            @media (min-width: 1200px) {
+                //@include media-breakpoint-up(xl) {
+                position: absolute;
+                left: 9999999em;
+                top: 100%;
+                background: $link-colour;
+            }
+
+            li {
+                margin-bottom: rem(10px);
+                padding: 0 rem(20px) rem(10px) rem(20px);
+                border-bottom: 1px solid $brand-colour1;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+
+    .shop-basket {
+
+        position: relative;
+        display: inline-block;
+        width: rem(50px);
+        height: rem(36px);
+        background-image: url(../images/shopping-cart.svg);
+        background-color: #ffffff;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 65% auto;
+
+        @media (min-width: 1200px) {
+
+            // width: rem(50px);
+            // height: rem(36px);
+            background-color: $brand-colour1;
+           // background-size: 65% auto;
+           // padding: rem(5px);
+        }
+
+        >span {
+
+            position: absolute;
+            top: rem(14px);
+            left: rem(25px);
+            width: rem(20px);
+            height: rem(20px);
+            color: #ffffff;
+            text-align: center;
+            font-size: rem(10px);
+            font-weight: bold;
+            background: url(../images/circle.svg) center center no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+
+            @media (min-width: 1200px) {
+
+                // top: rem(14px);
+                // left: rem(25px);
+            }
+
+            .shop-basket-count {
+
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.btn-mobile-nav-wrap {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (min-width: $xl-min) {
+        //@include media-breakpoint-up(xl) {
+        display: none;
+    }
+
+    .btn-mobile-nav {
+
+        position: relative;
+        float: right;
+        width: rem(30px);
+        z-index: 2;
+    }
+}

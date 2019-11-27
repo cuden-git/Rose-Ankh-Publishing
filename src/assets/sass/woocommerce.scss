@@ -1,0 +1,110 @@
+.woocommerce {
+
+    a {
+
+        &.button {
+            @extend .btn;
+        }
+    }
+
+    a,
+    button {
+
+        &.button {
+ 
+            &.alt {
+                background-color: #ffffff;
+                color: $brand-colour1;
+                border: 2px solid $brand-colour1;
+
+                &:hover {
+                    background-color: $brand-colour1;
+                }
+            }
+        }
+    }
+
+    form {
+        .woocommerce-shipping-fields {
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        .woocommerce-billing-fields {
+
+            margin-bottom: rem(30px);
+
+            @include media-breakpoint-up(md) {
+                padding-right: rem(30px);
+            }
+        }
+
+        .form-row {
+            display: block;
+
+            label {
+                
+            }
+
+            .woocommerce-input-wrapper {
+                display: block;
+            }
+
+            textarea {
+                height: rem(200px);
+            }
+        }
+    }
+    
+    
+    ul.products {
+
+        li.product {
+
+            .price {
+                color: #ffffff;
+            }
+        }
+    }
+
+    div.product {
+
+        p.price {
+            color: #ffffff;
+        }
+
+        .woocommerce-tabs {
+
+            ul.tabs {
+                z-index: 1;
+
+                li {
+                    &.active {
+        
+                        background-color: $brand-colour1-dark;
+
+                        a {
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    span.onsale {
+        background-color: $brand-colour1-dark;
+        z-index: 1;
+    }
+
+    .single-product {// Hide meta data on single product page, eg categories
+        
+        .product_meta {
+
+            display: none;
+        }
+     }
+
+}

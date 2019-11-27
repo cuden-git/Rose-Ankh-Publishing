@@ -1,0 +1,64 @@
+#site-header {
+
+    position: relative;
+    background-color: $brand-colour1-dark;
+    //padding-top: 2rem;
+    z-index: 2;
+    //@media (max-width:$xl - $max-offset) {
+   // @include media-breakpoint-up(xl) {
+        height: rem(90px);
+   // }
+
+   .row {
+        height: 100%;
+    }
+}
+
+.logo-wrap  {
+
+     position: relative;
+     height: 100%;
+     text-align: center;
+
+    .site-logo-link {
+
+        position: absolute;
+        width: 80%;
+        left: 0;
+        display: inline-block;
+        background: #000000;
+        padding: rem(6px) rem(12px);
+        border: 5px solid $brand-colour1;
+
+        @include media-breakpoint-down(lg) {
+            min-width: rem(90px);
+            max-width: rem(125px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @media (min-width: 1200px) {
+            max-width: rem(152px);
+            top: rem(20px);
+            padding: rem(22px) rem(12px);
+        }
+
+        > img {
+
+            width: 70%;
+    
+            @media (min-width: 1200px) {
+                width: 70%;
+            }
+        }
+    }
+}
+
+// .mobile-nav-btn {
+//     width: rem(50px);
+//     cursor: pointer;
+
+//     @include media-breakpoint-up(xl) {
+//         display: none;
+//     }
+// }

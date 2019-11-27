@@ -1,0 +1,22 @@
+.wpcf7-form {
+
+    @include media-breakpoint-up(lg) {
+        max-width: rem(800px);
+    }
+
+    label {
+        margin-bottom: rem(20px);
+    }
+
+    .label-text {
+        display: block;
+        margin-bottom: rem(10px);
+        color: $link-colour;
+    }
+
+    .wpcf7-response-output {
+        border-color: #ff0000;
+        font-size: rem(18px);
+        color: #ff0000;
+    }
+}

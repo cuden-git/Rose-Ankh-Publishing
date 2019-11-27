@@ -1,0 +1,38 @@
+.single-author {
+
+    header {
+
+        border-bottom: 1px solid $brand-colour1;
+        padding-bottom: rem(30px);
+    }
+    
+    .author-img {
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            margin-bottom: rem(30px);
+        }
+    }
+
+    .author-name {
+
+        @include media-breakpoint-up(sm) {
+            display: flex;
+            align-items: flex-end;
+            padding-left: rem(30px);
+        }
+
+        .page-title {
+
+            margin-bottom: 0;
+
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+            }
+        }
+    }
+
+    .author-content {
+        padding-top: rem(50px);
+    }
+}

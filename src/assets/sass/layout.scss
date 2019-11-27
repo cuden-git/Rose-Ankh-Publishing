@@ -1,0 +1,16 @@
+.container {
+    @include media-breakpoint-down(sm) {
+        padding: 0 rem(30px);
+    }
+}
+
+#col-main{
+
+    padding-bottom: 4rem;
+    padding: rem(100px) 0 rem(200px) 0;
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+        padding: rem(50px) 0 rem(100px) 0;
+    }
+}

@@ -1,0 +1,12 @@
+.single {
+    .single-post-img {
+
+        margin-bottom: rem(20px);
+
+        @include media-breakpoint-up(sm) {
+            float: left;
+            width: 40%;
+            margin-right: rem(40px);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.home-hero-img {
+    text-align: center;
+}
+
+.home-splash {
+
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(50px);
+    }
+
+    img {
+
+        margin-bottom: rem(30px);
+    }
+
+    h2,h1 {
+
+        text-align: center;
+        color: $brand-colour2;
+        text-shadow: rem(1px) rem(1px) rem(1px) #ffffff;
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(25px);
+        }
+
+        @include media-breakpoint-up(md) {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}

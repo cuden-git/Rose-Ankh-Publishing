@@ -1,0 +1,36 @@
+.blog-list {
+
+    $item-gap: rem(30px);
+
+    > .row {
+
+        @include media-breakpoint-up(sm) {
+            justify-content: space-between;
+        }
+    }
+
+    .blog-list-item {
+
+        margin-bottom: rem(30px);
+
+        @include media-breakpoint-up(sm) {
+            flex: 0 0 calc(50% - #{$item-gap}/2);
+            max-width: calc(50% - #{$item-gap}/2);
+        }
+    }
+
+    .blog-thumbnail {
+
+        padding-bottom: 56%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: rem(30px);
+    }
+
+    .blog-item-title {
+
+        text-align: center;
+        font-size: rem(20px);
+    }
+}

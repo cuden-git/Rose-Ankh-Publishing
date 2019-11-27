@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+
+        &.nav-open {
+            overflow: hidden;  
+        }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    &.alignleft {
+
+        @include media-breakpoint-up(md) {
+            margin: 0 rem(30px) rem(30px) 0;
+        }
+    }
+
+    &.alignright {
+
+        @include media-breakpoint-up(md) {
+            margin: 0 0 rem(30px) rem(30px);
+        }
+    }
+}
+
+.alignleft {
+    float: left;
+}
+
+/* Form Elements */
+label {
+    display: block;
+}
+
+input {
+
+    &[type=email],
+    &[type=text] {
+        padding: rem(10px);
+        width: 100%;
+    }
+
+    &[type=submit] {
+        background-color: $link-colour;
+        color: $brand-colour1;
+        padding: rem(5px) rem(15px);
+        border: 1px solid transparent;
+        transition: background-color .5s;
+        font-size: rem(20px);
+        font-weight: bold;
+        
+        &:hover {
+            background-color: $brand-colour1;
+            color: $link-colour;
+            border: 1px solid $link-colour;
+        }
+    }
+}
+
+textarea {
+    padding: rem(10px);
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    font-size: rem(20px);
+    font-weight: bold;
+    background: $brand-colour1;
+    color: #000000;
+    transition: background .5s;
+
+    &:hover {
+        background: #ffffff;
+        color: $brand-colour1;
+    }
+}
